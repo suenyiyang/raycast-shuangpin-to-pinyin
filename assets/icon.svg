@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C5CFC"/>
+      <stop offset="1" stop-color="#3867F4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#14205F" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="76" y="132" width="150" height="248" rx="42" fill="#FFFFFF" fill-opacity="0.96"/>
+    <rect x="286" y="132" width="150" height="248" rx="42" fill="#FFFFFF" fill-opacity="0.96"/>
+  </g>
+  <path d="M230 256h55m-21-22 22 22-22 22" fill="none" stroke="#D8DDFE" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="151" y="291" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="96" font-weight="700" fill="#614FEA">双</text>
+  <text x="361" y="296" text-anchor="middle" font-family="SF Pro Rounded, SF Pro Display, sans-serif" font-size="112" font-weight="750" fill="#4164F2">P</text>
+  <circle cx="151" cy="346" r="7" fill="#B8B1FC"/>
+  <circle cx="361" cy="346" r="7" fill="#AAB9FC"/>
+</svg>

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "shuangpin-to-pinyin",
+  "title": "双拼转全拼",
+  "description": "将选中的双拼编码转换为全拼并替换原文本",
+  "icon": "icon.png",
+  "author": "suenyiyang",
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "commands": [
+    {
+      "name": "convert-selected-text",
+      "title": "双拼转全拼",
+      "subtitle": "转换选中文本",
+      "description": "读取选中的双拼编码，预览全拼结果并替换原文本",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "defaultScheme",
+      "type": "dropdown",
+      "required": true,
+      "default": "xiaohe",
+      "title": "默认双拼方案",
+      "description": "打开转换界面时默认使用的双拼布局",
+      "data": [
+        {
+          "title": "小鹤双拼",
+          "value": "xiaohe"
+        },
+        {
+          "title": "Apple 默认",
+          "value": "apple-default"
+        },
+        {
+          "title": "搜狗双拼",
+          "value": "sogou"
+        },
+        {
+          "title": "拼音加加",
+          "value": "pinyin-jiajia"
+        },
+        {
+          "title": "微软双拼",
+          "value": "microsoft"
+        },
+        {
+          "title": "常用双拼",
+          "value": "common"
+        }
+      ]
+    },
+    {
+      "name": "fallbackToClipboard",
+      "type": "checkbox",
+      "required": false,
+      "default": true,
+      "title": "剪贴板回退",
+      "description": "当当前 App 没有向 Raycast 暴露选区时，尝试转换剪贴板中的文本",
+      "label": "读取不到选中文本时使用剪贴板内容"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.1.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "^22.19.17",
+    "@types/react": "^19.0.10",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  }
+}
